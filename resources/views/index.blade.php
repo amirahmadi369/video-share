@@ -66,7 +66,7 @@
                             <div class="thumb"><img
                                     src="https://s.gravatar.com/avatar/dfca86228f1ed5f0554827a8d907172a?s=80" alt="">
                             </div>
-                            <h2>مهرداد سامی</h2>
+                            <h2>امیر احمدی </h2>
                             <h3>25 اشتراک</h3>
                             <i class="fa fa-angle-down"></i>
                         </a>
@@ -113,7 +113,7 @@
                             </div>
                             <div class="video-info">
                                 <a href="#" class="title">{{ $video->name }}</a>
-                                <a class="channel-name" href="#">مهرداد سامی<span>
+                                <a class="channel-name" href="#">امیر احمدی <span>
                                         <i class="fa fa-check-circle"></i></span></a>
                                 <span class="views"><i class="fa fa-eye"></i>2.8M بازدید </span>
                                 <span class="date"><i class="fa fa-clock-o"></i>{{ $video->created_at }}</span>
@@ -135,7 +135,7 @@
                             </div>
                             <div class="video-info">
                                 <a href="#" class="title">{{ $video->name }}</a>
-                                <a class="channel-name" href="#">مهرداد سامی<span>
+                                <a class="channel-name" href="#">امیر احمدی <span>
                                         <i class="fa fa-check-circle"></i></span></a>
                                 <span class="views"><i class="fa fa-eye"></i>2.8M بازدید </span>
                                 <span class="date"><i class="fa fa-clock-o"></i>{{ $video->created_at }}</span>
@@ -158,7 +158,7 @@
                             </div>
                             <div class="video-info">
                                 <a href="#" class="title">{{ $video->name }}</a>
-                                <a class="channel-name" href="#">مهرداد سامی<span>
+                                <a class="channel-name" href="#"> امیر احمدی<span>
                                         <i class="fa fa-check-circle"></i></span></a>
                                 <span class="views"><i class="fa fa-eye"></i>2.8M بازدید </span>
                                 <span class="date"><i class="fa fa-clock-o"></i>{{ $video->created_at }}</span>
