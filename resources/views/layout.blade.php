@@ -99,8 +99,9 @@
 
     <div class="site-output">
         <div id="all-output" class="col-md-12">
-    @yield('content')
-        </div><!-- // row -->
+   @yield('content')  
+
+</div><!-- // row -->
 
 
 
