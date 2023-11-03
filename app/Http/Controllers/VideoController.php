@@ -12,4 +12,13 @@ class VideoController extends Controller
     $videos = Video::all();
     dd($videos);
    }
+   public function create(){
+     return view('videos.create');
+   }
+   public function store(Request $request){
+   Video::create($request->all());
+   return redirect()->route('index');
+
+      
+   }
 }
