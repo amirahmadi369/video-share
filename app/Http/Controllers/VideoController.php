@@ -25,7 +25,7 @@ class VideoController extends Controller
       
     ]);
    Video::create($request->all());
-   return redirect()->route('index')->with('alert' , 'this is correct');  
+   return redirect()->route('index')->with('alert' , __('messages.success'));  
 
       
    }
