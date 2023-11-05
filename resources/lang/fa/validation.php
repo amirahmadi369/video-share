@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'required' => ':attribute الزامی  میباشد.',
+    'required' => ':attribute الزامی   میباشد.',
     'attributes' => [ 
         'name' => 'نام  ویدیو',
         'length' => 'مدت  زمان',
