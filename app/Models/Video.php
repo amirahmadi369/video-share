@@ -10,6 +10,10 @@ class Video extends Model
 {
     use HasFactory;
     protected $fillable = ['name' , 'url' , 'thumbnail' , 'slug' , 'length','description'] ;
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
     public function getlengthAttribute($value)
     {
         return gmdate("i:s", $value) ;
