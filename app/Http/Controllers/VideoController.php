@@ -24,4 +24,9 @@ class VideoController extends Controller
 
       
    }
+   public function show(Request $request, $id)
+   {
+    $video=   Video::find($id);
+    return view('videos.show' , compact('video'));
+   }
 }

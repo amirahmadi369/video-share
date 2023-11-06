@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Video extends Model
 {
     use HasFactory;
-    protected $fillable = ['name' , 'url' , 'thumbnail' , 'slug' , 'length'] ;
+    protected $fillable = ['name' , 'url' , 'thumbnail' , 'slug' , 'length','description'] ;
     public function getlengthAttribute($value)
     {
         return gmdate("i:s", $value) ;
@@ -17,5 +17,8 @@ class Video extends Model
     public function getcreatedatAttribute($value)
     {
         return (new verta($value))->formatDifference();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    }
+    public function relatedVideos($count = 6){
+        return Video::all()->random($count);
     }
 }
