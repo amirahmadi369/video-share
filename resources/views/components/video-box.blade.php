@@ -7,6 +7,8 @@
                             </div>
                             <div class="video-info">
                                 <a href="{{ route('videos.show', $video->slug) }}" class="title">{{ $video->name }}</a>
+                                <a href="{{ route('videos.edit', $video->slug) }}" >
+                                    <i class="fa fa-pencil"aria-hidden="true"></i>
                                 <a class="channel-name" href="#">امیر احمدی <span>
                                         <i class="fa fa-check-circle"></i></span></a>
                                 <span class="views"><i class="fa fa-eye"></i>2.8M بازدید </span>
