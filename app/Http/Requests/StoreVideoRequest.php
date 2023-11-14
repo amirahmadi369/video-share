@@ -23,11 +23,11 @@ class StoreVideoRequest extends FormRequest
     {
         return [
            
-                'name'=>['required'],
-                'length'=>['required', 'integer'],
-                'slug'=>['required' , 'unique:videos,slug', 'alpha_dash'], 
-                'url'=>['required', 'url'],
-                'thumbnail'=>['required','url'], 
+                'name'  => ['required'],
+                'length'=> ['required', 'integer'],
+                'slug'=> ['required','unique:videos,slug','alpha_dash'],
+                'url' => ['required', 'url'],
+                'thumbnail' => ['required','url'], 
                 
               
         ];

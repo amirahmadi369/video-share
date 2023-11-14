@@ -12,7 +12,7 @@ class VideoController extends Controller
    public function index()
    {
     $videos = Video::all();
-    dd($videos);
+    
    }
    public function create(){
      return view('videos.create');
@@ -33,8 +33,8 @@ class VideoController extends Controller
    {
     return view('videos.edit', compact('video'));                         
    }
-   public function update(Request $request , Video $video){
+   public function update(StoreVideoRequest $request , Video $video){
     $video->update($request->all());
-    return redirect()->route('videos.show' , $video->slug)->with('alert', __('massages.video_edited'));
+    return redirect()->route('videos.show' , $video->slug)->with('alert', __('messages.video_edited'));
    } 
 }
