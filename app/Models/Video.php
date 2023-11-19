@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Video extends Model
 {
     use HasFactory;
+   
     protected $fillable = ['name' , 'url' , 'thumbnail' , 'slug' , 'length','description','category_id'] ;
     public function getRouteKeyName()
     {
@@ -23,7 +24,7 @@ class Video extends Model
         return (new verta($value))->formatDifference();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
     }
     public function relatedVideos($count = 6){
-        return Video::all()->random($count);
+        return $this->category->getRandomVideos($count);
     }
     public function category()
     {
