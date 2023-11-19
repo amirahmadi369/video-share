@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Video extends Model
 {
     use HasFactory;
-    protected $fillable = ['name' , 'url' , 'thumbnail' , 'slug' , 'length','description'] ;
+    protected $fillable = ['name' , 'url' , 'thumbnail' , 'slug' , 'length','description','category_id'] ;
     public function getRouteKeyName()
     {
         return 'slug';
@@ -24,5 +24,13 @@ class Video extends Model
     }
     public function relatedVideos($count = 6){
         return Video::all()->random($count);
+    }
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    public function getCategoryNameAttribute()
+    {
+        return $this->category?->name;
     }
 }
