@@ -22,6 +22,6 @@ class LatestVideo extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.latest-video');
+        return view('components.latest-videos');
     }
 }

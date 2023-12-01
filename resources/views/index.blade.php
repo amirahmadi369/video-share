@@ -1,20 +1,20 @@
 @extends('layout')
 @section('content')
-           <x-latest-video></x-latest-video>
-            <h1 class="new-video-title"><i class="fa fa-bolt"></i> پربازدیدترین ویدیوها</h1>
-            <div class="row">
-                @foreach ($mostViewedVideos as $video)
-                <x-video-box :video=$video></x-video-box>
-                @endforeach
+    <x-latest-videos></x-latest-videos>
+    <h1 class="new-video-title"><i class="fa fa-bolt"></i> پربازدیدترین ویدیوها</h1>
+    <div class="row">
+        @foreach ($mostViewedVideos as $video)
+            <x-video-box :video="$video"></x-video-box>
+        @endforeach
 
-            </div>
+    </div>
 
-            <h1 class="new-video-title"><i class="fa fa-bolt"></i> محبوب‌ترین‌ها</h1>
-            <div class="row">
-                @foreach ($mostPopularVideos as $video)
-                <x-video-box :video=$video></x-video-box>
-                @endforeach
+    <h1 class="new-video-title"><i class="fa fa-bolt"></i> محبوب‌ترین‌ها</h1>
+    <div class="row">
+        @foreach ($mostPopularVideos as $video)
+            <x-video-box :video="$video"></x-video-box>
+        @endforeach
 
-            </div>
+    </div>
 
 @endsection

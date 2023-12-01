@@ -44,10 +44,10 @@
                         <i class="fa fa-close"></i>
                     </a>
                     <div id="logo">
-                        <a href="01-home.html"><img src="img/logo.png" alt=""></a>
+                        <a href="01-home.html"><img src="/img/logo.png" alt=""></a>
                     </div>
                 </div><!-- // col-md-2 -->
-                <div class="col-lg-3 col-md-3 col-sm-6 hidden-xs hidden-sm">
+                <div class="col-lg-3 col-md-3 col-sm-6 hidden-xs hidden-sm">   
                     <div class="search-form">
                         <form id="search" action="#" method="post">
                             <input type="text" placeholder="جستجو ..." />
@@ -60,13 +60,14 @@
                 <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs hidden-sm">
                     <!--  -->
                 </div>
+                @auth
                 <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
                     <div class="dropdown">
                         <a data-toggle="dropdown" href="#" class="user-area">
                             <div class="thumb"><img
-                                    src="https://s.gravatar.com/avatar/dfca86228f1ed5f0554827a8d907172a?s=80" alt="">
+                                    src="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ssssss" alt="">
                             </div>
-                            <h2>امیر احمدی </h2>
+                            <h2>{{auth()->user()->name}} </h2>
                             <h3>25 اشتراک</h3>
                             <i class="fa fa-angle-down"></i>
                         </a>
@@ -74,27 +75,33 @@
                             <li><a href="#"><i class="fa fa-edit color-1"></i>ویرایش پروفایل</a></li>
                             <li><a href="#"><i class="fa fa-video-camera color-2"></i>اضافه کردن فیلم</a></li>
                             <li><a href="#"><i class="fa fa-star color-3"></i>برگزیده</a></li>
-                            <li><a href="#"><i class="fa fa-sign-out color-4"></i>خروج</a></li>
+                            <li><a href="{{ route('logout') }}"><i class="fa fa-sign-out color-4"></i>خروج</a></li>
                         </ul>
                     </div>
                 </div>
             </div><!-- // row -->
+            @endauth
+            @guest
+                    <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
+                        <a href="{{ route('login.create') }}" class="btn btn-danger">ورود</a>
+                        <a href="{{ route('register.create') }}" class="btn btn-danger">ثبت نام</a>
+                    </div>
+
+                @endguest
         </div><!-- // container-full -->
     </header><!-- // header -->
-<x-header-menu />
-   
+
+    <x-header-menu />
+
     <div class="site-output">
-    @if (session('alert'))
-    <div class="alert alert-success">
-        {{ session('alert') }}
-    </div>
-@endif
+        @if (session('alert'))
+            <div class="alert alert-success">
+                {{ session('alert') }}
+            </div>
+        @endif
         <div id="all-output" class="col-md-12">
-   @yield('content')  
-
-</div><!-- // row -->
-
-
+            @yield('content')
+        </div><!-- // row -->
 
     </div>
 

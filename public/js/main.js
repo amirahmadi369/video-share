@@ -3317,13 +3317,11 @@ var module_default = src_default;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-/* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_bootstrap__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
+/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-
-window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_1__["default"];
-alpinejs__WEBPACK_IMPORTED_MODULE_1__["default"].start();
+window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
 /***/ }),
 
@@ -35420,6 +35418,16 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
+/***/ (() => {
+
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):\nSyntaxError: 'import' and 'export' may appear only with 'sourceType: module' (2:0)\n    at pp$4.raise (C:\\laravel\\video-share\\node_modules\\acorn\\dist\\acorn.js:2927:15)\n    at pp$1.parseStatement (C:\\laravel\\video-share\\node_modules\\acorn\\dist\\acorn.js:870:18)\n    at _class.parseStatement (C:\\laravel\\video-share\\node_modules\\acorn-node\\lib\\dynamic-import\\index.js:65:118)\n    at pp$1.parseTopLevel (C:\\laravel\\video-share\\node_modules\\acorn\\dist\\acorn.js:755:23)\n    at _class.parse (C:\\laravel\\video-share\\node_modules\\acorn\\dist\\acorn.js:555:17)\n    at Function.parse (C:\\laravel\\video-share\\node_modules\\acorn\\dist\\acorn.js:578:37)\n    at Object.parse (C:\\laravel\\video-share\\node_modules\\acorn-node\\index.js:30:28)\n    at parse (C:\\laravel\\video-share\\node_modules\\detective\\index.js:22:18)\n    at exports.find (C:\\laravel\\video-share\\node_modules\\detective\\index.js:47:15)\n    at module.exports (C:\\laravel\\video-share\\node_modules\\detective\\index.js:26:20)\n    at createModule (C:\\laravel\\video-share\\node_modules\\tailwindcss\\lib\\lib\\getModuleDependencies.js:21:43)\n    at getModuleDependencies (C:\\laravel\\video-share\\node_modules\\tailwindcss\\lib\\lib\\getModuleDependencies.js:29:22)\n    at C:\\laravel\\video-share\\node_modules\\tailwindcss\\lib\\index.js:77:42\n    at tailwindcss (C:\\laravel\\video-share\\node_modules\\tailwindcss\\lib\\index.js:96:36)\n    at Processor.normalize (C:\\laravel\\video-share\\node_modules\\postcss\\lib\\processor.js:18:13)\n    at new Processor (C:\\laravel\\video-share\\node_modules\\postcss\\lib\\processor.js:11:25)\n    at postcss (C:\\laravel\\video-share\\node_modules\\postcss\\lib\\postcss.js:26:10)\n    at Object.loader (C:\\laravel\\video-share\\node_modules\\postcss-loader\\dist\\index.js:96:17)\n    at processResult (C:\\laravel\\video-share\\node_modules\\webpack\\lib\\NormalModule.js:764:19)\n    at C:\\laravel\\video-share\\node_modules\\webpack\\lib\\NormalModule.js:866:5\n    at C:\\laravel\\video-share\\node_modules\\loader-runner\\lib\\LoaderRunner.js:400:11\n    at C:\\laravel\\video-share\\node_modules\\loader-runner\\lib\\LoaderRunner.js:252:18\n    at context.callback (C:\\laravel\\video-share\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at Object.loader (C:\\laravel\\video-share\\node_modules\\postcss-loader\\dist\\index.js:142:7)");
+
+/***/ }),
+
 /***/ "./node_modules/axios/dist/browser/axios.cjs":
 /*!***************************************************!*\
   !*** ./node_modules/axios/dist/browser/axios.cjs ***!
@@ -38696,18 +38704,6 @@ module.exports = axios;
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -38767,7 +38763,8 @@ module.exports = axios;
 /******/ 	__webpack_require__("./resources/js/bootstrap.min.js");
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	__webpack_require__("./resources/js/imagesloaded.pkgd.min.js");
-/******/ 	var __webpack_exports__ = __webpack_require__("./resources/js/grid-blog.min.js");
+/******/ 	__webpack_require__("./resources/js/grid-blog.min.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./resources/css/app.css");
 /******/ 	
 /******/ })()
 ;
