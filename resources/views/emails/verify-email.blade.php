@@ -1,6 +1,13 @@
-<h1>
-    {{$user_name}}
-</h1>
-<h1>
-    this is email
-</h1>
+@component('mail::message')
+@component('mail::button', ['url'=>$url])
+Verrify Email
+@endComponent
+# Order Shipped
+ 
+Your order has been shipped!
+ 
+
+ 
+Thanks
+{{ config('app.name') }}
+@endComponent
