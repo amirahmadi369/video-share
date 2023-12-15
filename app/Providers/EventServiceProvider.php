@@ -3,9 +3,11 @@
 namespace App\Providers;
 
 use Illuminate\Auth\Events\Registered;
+use App\Events\VideoCreated;
+use App\Listeners\SendEmail;
+use App\Listeners\ProcessVideo; // اضافه کردن استفاده از کلاس SendEmail
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -18,6 +20,10 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        VideoCreated::class => [
+            SendEmail::class,
+            ProcessVideo::class
+        ],
     ];
 
     /**
@@ -27,12 +33,16 @@ class EventServiceProvider extends ServiceProvider
     {
         //
     }
+    /**
+ * Determine if events and listeners should be automatically discovered.
+ */
+
 
     /**
      * Determine if events and listeners should be automatically discovered.
      */
     public function shouldDiscoverEvents(): bool
     {
-        return false;
+        return false ;
     }
 }

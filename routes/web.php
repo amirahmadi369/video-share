@@ -1,4 +1,6 @@
 <?php
+use App\Listeners\SendEmail;
+use App\Events\VideoCreated;
 use App\Models\User;
 use App\Models\Video;
 use Illuminate\Support\Facades\Route;
@@ -53,4 +55,8 @@ Route::get('/jobs', function() {
 });
 Route::get('/email' ,function(){
     Mail::to('amir@gmail.com')->send (new VerifyEmail(User::first()));
+});
+Route::get('/event' ,function(){
+    $video = Video::first();
+    VideoCreated::dispatch($video);
 });
