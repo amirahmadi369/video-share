@@ -1,8 +1,10 @@
 <?php
+use App\Notifications\VideoProcessed;
 use App\Listeners\SendEmail;
 use App\Events\VideoCreated;
 use App\Models\User;
 use App\Models\Video;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\VideoController;
@@ -59,4 +61,9 @@ Route::get('/email' ,function(){
 Route::get('/event' ,function(){
     $video = Video::first();
     VideoCreated::dispatch($video);
+});
+Route::get('/notify', function () {
+    $user = User::first();
+    $video = Video::first();
+    $user->notify(new VideoProcessed($video));
 });
